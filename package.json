@@ -1,0 +1,19 @@
+{
+  "name": "notification-system",
+  "version": "1.0.0",
+  "description": "A notification system with multiple channels",
+  "dependencies": {
+    "cors": "^2.8.5"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.0"
+  },
+  "scripts": {
+    "start": "cd backend && node server.js",
+    "dev": "cd backend && nodemon server.js",
+    "test": "cd backend && jest",
+    "build": "cd frontend && npm run build",
+    "install-all": "npm install && cd backend && npm install && cd ../frontend && npm install",
+    "dev-full": "concurrently \"cd backend && npm run dev\" \"cd frontend && npm run dev\""
+  }
+}
