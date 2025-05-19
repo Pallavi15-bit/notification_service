@@ -27,13 +27,8 @@ app.use('/', notificationRoutes);
 app.use('/', userRoutes);
 
 // Serve frontend for any other routes - fix the wildcard route
-app.get('/', (req, res) => {
+app.get('/:path(*)', (req, res) => {
   res.sendFile(path.join(__dirname, '../frontend/public/add-user.html'));
-});
-
-// Serve the React app for all other routes
-app.get('/*', (req, res) => {
-  res.sendFile(path.join(__dirname, '../frontend/dist/index.html'));
 });
 
 // Error handling middleware
