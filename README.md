@@ -29,6 +29,7 @@ A robust, scalable notification service that supports multiple communication cha
 
 ### DevOps
 - **Docker**: Containerization for consistent environments
+- **Postman**: Notification sending and recieving Procedure
 - **Jest**: Testing framework for unit and integration tests
 
 ## Getting Started
@@ -63,8 +64,19 @@ npm install
 cp .env.example .env
 # Edit .env with your configuration
 
-# Start the application
+#Backend Start
+cd backend
 npm run dev
+
+#Frontend Start
+cd frontend
+npm run dev
+
+
+# Start the application
+npm run dev-full
+
+
 ```
 
 ## Usage
