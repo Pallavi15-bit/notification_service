@@ -44,8 +44,8 @@ A robust, scalable notification service that supports multiple communication cha
 #### Using Docker (Recommended)
 ```bash
 # Clone the repository
-git clone https://github.com/yourusername/notification-system.git
-cd notification-system
+git clone https://github.com/Pallavi15-bit/notification_service.git
+cd notification_service
 
 # Start all services
 docker-compose up -d
@@ -54,15 +54,11 @@ docker-compose up -d
 #### Manual Setup
 ```bash
 # Clone the repository
-git clone https://github.com/yourusername/notification-system.git
-cd notification-system
+git clone https://github.com/Pallavi15-bit/notification_service.git
+cd notification_service
 
 # Install dependencies
 npm install
-
-# Configure environment variables
-cp .env.example .env
-# Edit .env with your configuration
 
 #Backend Start
 cd backend
@@ -71,7 +67,6 @@ npm run dev
 #Frontend Start
 cd frontend
 npm run dev
-
 
 # Start the application
 npm run dev-full
@@ -139,32 +134,7 @@ const response = await fetch('/api/notifications/send', {
 | warning | Potential issue | Low disk space, approaching limits |
 | info | General information | System updates, new features |
 
-## Configuration
 
-The notification system can be configured through environment variables:
-
-```
-# Server Configuration
-PORT=3000
-NODE_ENV=development
-
-# Database Configuration
-MONGODB_URI=mongodb://localhost:27017/notification-system
-
-# Email Configuration
-SMTP_HOST=smtp.example.com
-SMTP_PORT=587
-SMTP_USER=user
-SMTP_PASS=password
-
-# SMS Configuration
-TWILIO_ACCOUNT_SID=your_account_sid
-TWILIO_AUTH_TOKEN=your_auth_token
-TWILIO_PHONE_NUMBER=+1234567890
-
-# Queue Configuration
-QUEUE_PROVIDER=kafka
-KAFKA_BROKERS=localhost:9092
 ```
 
 ## API Documentation
